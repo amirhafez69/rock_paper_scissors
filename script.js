@@ -70,6 +70,13 @@ function game() {
         const playerSelection = playerPlay();
         playRound(playerSelection, computerSelection);
     }
+    if (playerWins == computerWins) {
+        alert("Tie! No final winner.");
+    } else if (playerWins > computerWins) {
+        alert("You won!");
+    } else {
+        alert("You lost!");
+    }
 }
 
 game();
