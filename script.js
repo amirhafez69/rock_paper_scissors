@@ -1,30 +1,27 @@
-let playerSelection;
-let computerSelection;
-
 function computerPlay() {
-    return Math.floor(Math.random() * 3);
+    let input = Math.floor(Math.random() * 3);
+    switch (input) {
+        case 0:
+            return "paper";
+            break;
+        
+        case 1:
+            return "rock";
+            break;
+
+        case 2:
+            return "scissors";
+            break;
+    }
 }
 
-console.log(computerPlay());
-
 function playerPlay() {
-    playerSelection = prompt("Enter rock, paper or scissors:").toLowerCase();
-    switch (playerSelection) {
-        case "paper":
-            return 0;
-            break;
-
-        case "rock":
-            return 1;
-            break;
-
-        case "scissors":
-            return 2;
-            break;
-
-        default:
-            alert("Invalid input!");
-            playerPlay();
+    let input = prompt("Enter rock, paper or scissors:").toLowerCase();
+    if (input == "rock" || input == "paper" || input == "scissors") {
+        return input;
+    } else {
+        alert("Invalid input!");
+        playerPlay();
     }
 }
 
@@ -37,8 +34,8 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
-        computerSelection = computerPlay();
-        playerSelection = playerPlay();
+        const computerSelection = computerPlay();
+        const playerSelection = playerPlay();
         playRound(playerSelection, computerSelection);
     }
 }
