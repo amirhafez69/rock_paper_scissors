@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Let's play Rock paper scissors!</h1>
-    <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="top_pane">
+        <div class="container">
+            <div class="hero">
+                <div class="main">Rock Paper Scissors</div>
+                <div class="secondary">Let's play five rounds!</div>
+            </div>
+            <div class="buttons">
+                <button id="rock">Rock 🪨</button>
+                <button id="paper">Paper 📃</button>
+                <button id="scissors">Scissors ✂️</button>
+            </div>
+        </div>
     </div>
-    <div class="result"></div>
+    <ul class="result"></ul>
+
+    <audio data-button="rock" src="files/boom.wav"></audio>
+    <audio data-button="paper" src="files/tink.wav"></audio>
+    <audio data-button="scissors" src="files/hihat.wav"></audio>
 </body>
 </html>
